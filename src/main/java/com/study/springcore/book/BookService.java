@@ -1,14 +1,16 @@
 package com.study.springcore.book;
 
+import lombok.NoArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.PostConstruct;
 import java.util.Date;
 
+@NoArgsConstructor
 @Service
 public class BookService {
 
-    private BookRepository bookRepository;
+    public BookRepository bookRepository;
 
     public BookService(BookRepository bookRepository) {
         this.bookRepository = bookRepository;
@@ -26,5 +28,9 @@ public class BookService {
         System.out.println("==================================");
         System.out.println("나는 BookService야!ㅎㅎ");
         System.out.println("==================================");
+    }
+
+    public void setBookRepository(BookRepository bookRepository) {
+        this.bookRepository = bookRepository;
     }
 }
