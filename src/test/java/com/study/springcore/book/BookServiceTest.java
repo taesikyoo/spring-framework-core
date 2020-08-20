@@ -3,11 +3,9 @@ package com.study.springcore.book;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
-import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.Assert.*;
 import static org.mockito.Mockito.when;
 
 @RunWith(SpringRunner.class)
@@ -21,7 +19,7 @@ public class BookServiceTest {
         Book book = new Book();
 
         when(bookRepository.save(book)).thenReturn(book);
-        BookService bookService = new BookService(bookRepository);
+        BookService bookService = new BookService();
 
         Book result = bookService.save(book);
 

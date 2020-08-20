@@ -1,11 +1,6 @@
 package com.study.springcore.book;
 
-import org.springframework.stereotype.Repository;
+public interface BookRepository {
 
-@Repository
-public class BookRepository {
-
-    public Book save(Book book) {
-        return null;
-    }
+    Book save(Book book);
 }
