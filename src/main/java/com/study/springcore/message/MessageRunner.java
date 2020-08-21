@@ -17,11 +17,11 @@ public class MessageRunner implements ApplicationRunner {
     @Override
     public void run(ApplicationArguments args) throws Exception {
         System.out.println(messageSource.getClass());
-        while (true) {
-            System.out.println(messageSource.getMessage("greeting", new String[]{"loopy"}, Locale.KOREA));
-            System.out.println(messageSource.getMessage("greeting", new String[]{"loopy"}, Locale.ENGLISH));
-            Thread.sleep(1500);
-        }
+//        while (true) {
+//            System.out.println(messageSource.getMessage("greeting", new String[]{"loopy"}, Locale.KOREA));
+//            System.out.println(messageSource.getMessage("greeting", new String[]{"loopy"}, Locale.ENGLISH));
+//            Thread.sleep(1500);
+//        }
     }
 }
 

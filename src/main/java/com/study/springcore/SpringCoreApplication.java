@@ -9,9 +9,11 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.context.support.GenericApplicationContext;
 import org.springframework.context.support.ReloadableResourceBundleMessageSource;
+import org.springframework.scheduling.annotation.EnableAsync;
 
-@SpringBootApplication
+@EnableAsync
 @PropertySource("classpath:/app.properties")
+@SpringBootApplication
 public class SpringCoreApplication {
 
 //    public static void main(String[] args) {
