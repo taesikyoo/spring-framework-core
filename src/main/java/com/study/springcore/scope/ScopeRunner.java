@@ -7,7 +7,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Component;
 
 @Component
-public class AppRunner implements ApplicationRunner {
+public class ScopeRunner implements ApplicationRunner {
 
     @Autowired
     ApplicationContext ctx;
