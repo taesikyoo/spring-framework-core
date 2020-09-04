@@ -1,6 +1,8 @@
 package com.study.springcore;
 
 import org.springframework.boot.ApplicationRunner;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.WebApplicationType;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.context.ApplicationContextInitializer;
@@ -16,10 +18,13 @@ import org.springframework.scheduling.annotation.EnableAsync;
 @SpringBootApplication
 public class SpringCoreApplication {
 
-//    public static void main(String[] args) {
-//        SpringApplication.run(SpringCoreApplication.class, args);
-//    }
+    public static void main(String[] args) {
+        SpringApplication app = new SpringApplication(SpringCoreApplication.class);
+        app.setWebApplicationType(WebApplicationType.NONE);
+        app.run(args);
+    }
 
+    /*
     public static void main(String[] args) {
         new SpringApplicationBuilder()
                 .sources(SpringCoreApplication.class)
@@ -27,6 +32,7 @@ public class SpringCoreApplication {
                         ctx.registerBean(ApplicationRunner.class, () -> args1 -> System.out.println("Functional Bean Definition")))
                 .run(args);
     }
+    */
 
     @Bean
     public MessageSource messageSource() {
