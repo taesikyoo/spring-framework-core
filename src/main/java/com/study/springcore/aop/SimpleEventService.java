@@ -1,10 +1,13 @@
 package com.study.springcore.aop;
 
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
+@Primary
 @Service
 public class SimpleEventService implements EventService {
 
+    @PerfLogging
     @Override
     public void createEvent() {
         try {
@@ -15,6 +18,7 @@ public class SimpleEventService implements EventService {
         System.out.println("Create an Event");
     }
 
+    @PerfLogging
     @Override
     public void publishEvent() {
         try {
